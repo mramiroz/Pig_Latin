@@ -53,7 +53,7 @@ public class Pig_Latin {
     static String consonantes (String str)
     {
         String inicio = "" + str.charAt(0);
-        if (esConsonante(str.charAt(1)) == true)
+        if (esConsonante(str.charAt(1)) == true  || str.charAt(1) == 'h' || str.charAt(1) == 'H')
         {
             inicio += str.charAt(1);
             str = str.substring(2) + inicio.toLowerCase() + "ay";
@@ -90,7 +90,7 @@ public class Pig_Latin {
         {
             if(esVocal(arrStr[i].charAt(0)) == true)
                 arrStr[i] = vocales(arrStr[i]);
-            else if (esConsonante(arrStr[i].charAt(0)) == true || arrStr[i].charAt(0) == 'h' || arrStr[i].charAt(0) == 'H')
+            else if (esConsonante(arrStr[i].charAt(0)) == true)
                 arrStr[i] = consonantes(arrStr[i]);                
             i++;
         }
@@ -103,6 +103,6 @@ public class Pig_Latin {
         return result;
     }
     public static void main(String[] args) {
-        System.out.println(traductor("Hola Bsuenas"));
+        System.out.println(traductor("Hola Bhuenas"));
     }
 }
