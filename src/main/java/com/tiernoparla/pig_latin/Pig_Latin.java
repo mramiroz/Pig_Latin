@@ -1,9 +1,5 @@
 package com.tiernoparla.pig_latin;
 
-import java.sql.ResultSet;
-import java.util.Arrays;
-
-
 public class Pig_Latin {
 
     static int cuentaPalabras(String str, char ch)
